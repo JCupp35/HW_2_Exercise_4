@@ -6,34 +6,37 @@
 
     <Button
         android:id="@+id/indicator_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Stop"
-        android:layout_centerInParent="true" />
+        android:layout_width="179dp"
+        android:layout_height="85dp"
+        android:layout_centerInParent="true"
+        android:text="Stop" />
 
         <View
             android:id="@+id/red"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="135dp"
+            android:layout_height="204dp"
             android:visibility = "visible"
             android:layout_above="@id/indicator_button"
-            android:background="@drawable/red" />
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/red2" />
 
     <View
         android:id="@+id/green"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="135dp"
+        android:layout_height="234dp"
         android:visibility = "visible"
         android:layout_above="@id/indicator_button"
-        android:background="@drawable/green" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green2" />
 
     <View
         android:id="@+id/yellow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility = "visible"
+        android:layout_width="135dp"
+        android:layout_height="204dp"
         android:layout_above="@id/indicator_button"
-        android:background="@drawable/yellow" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yellow2"
+        android:visibility="visible" />
 
 
 

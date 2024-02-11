@@ -1,9 +1,11 @@
 package com.cupp.msu.exercise4tracklightfinal
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var redlight: View
     private lateinit var greenlight: View
     private lateinit var yellowlight: View
+
 
 
     private var isStop = true
@@ -22,6 +25,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        trafficIndicator = findViewById(R.id.indicator_button)
+        redlight = findViewById(R.id.red)
+        greenlight = findViewById(R.id.green)
+        yellowlight = findViewById(R.id.yellow)
+
         redlight.visibility=View.INVISIBLE
         greenlight.visibility=View.INVISIBLE
         yellowlight.visibility=View.INVISIBLE
@@ -30,6 +38,8 @@ class MainActivity : AppCompatActivity() {
             if (isStop) {
                 trafficIndicator.setBackgroundResource(R.drawable.green)
                 trafficIndicator.text = "Go"
+                trafficIndicator.setTextColor(Color.BLACK)
+                trafficIndicator.setBackgroundColor(Color.GREEN)
                 redlight.visibility = View.INVISIBLE
                 greenlight.visibility = View.VISIBLE
                 yellowlight.visibility = View.INVISIBLE
@@ -38,6 +48,8 @@ class MainActivity : AppCompatActivity() {
             } else if (isGo) {
                 trafficIndicator.setBackgroundResource(R.drawable.yellow)
                 trafficIndicator.text = "Wait"
+                trafficIndicator.setTextColor(Color.BLACK)
+                trafficIndicator.setBackgroundColor(Color.YELLOW)
                 redlight.visibility = View.INVISIBLE
                 greenlight.visibility = View.INVISIBLE
                 yellowlight.visibility = View.VISIBLE
@@ -46,6 +58,8 @@ class MainActivity : AppCompatActivity() {
             } else {
                 trafficIndicator.setBackgroundResource(R.drawable.red)
                 trafficIndicator.text = "Stop"
+                trafficIndicator.setTextColor(Color.BLACK)
+                trafficIndicator.setBackgroundColor(Color.RED)
                 redlight.visibility = View.VISIBLE
                 greenlight.visibility = View.INVISIBLE
                 yellowlight.visibility = View.INVISIBLE
